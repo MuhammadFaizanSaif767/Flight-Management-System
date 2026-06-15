@@ -38,12 +38,18 @@ export default function Dashboard() {
                         <h1>Est.Passengers</h1>
                         <Users />
                     </div>
+                    <div>
+                        {dashdata.totalcustomers}
+                    </div>
                     <div>Live Updates</div>
                 </div>
                 <div>
                     <div className="flex justify-between">
                         <h1>Est.Revenue</h1>
                         <Wallet />
+                    </div>
+                    <div>
+                        {dashdata.revenue}
                     </div>
                     <div>Live Updates</div>
                 </div>
