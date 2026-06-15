@@ -13,9 +13,9 @@ export default function Dashboard() {
 
     return (
         <div className="p-4">
-            <div className="border-2  *:border grid grid-cols-4">
+            <div className="  *:border grid gap-3 grid-cols-4">
                 <div>
-                    <div className="flex justify-between">
+                    <div className="flex justify-between p-2">
                         <h1>Active Flights</h1>
                         <Plane />
                     </div>
@@ -30,6 +30,9 @@ export default function Dashboard() {
                     <div className="flex justify-between">
                         <h1>On Time Rate</h1>
                         <Clock3 />
+                    </div>
+                    <div>
+                        {dashdata.ontime}%
                     </div>
                     <div>Live Updates</div>
                 </div>
@@ -49,7 +52,7 @@ export default function Dashboard() {
                         <Wallet />
                     </div>
                     <div>
-                        {dashdata.revenue}
+                        Rs {dashdata.revenue}
                     </div>
                     <div>Live Updates</div>
                 </div>
