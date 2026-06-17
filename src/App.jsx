@@ -6,7 +6,7 @@ import Flights from './project/Pages/flights';
 import Dashboard from './project/Pages/dashboard';
 import Customers from './project/Pages/customers';
 import Bookings from './project/Pages/booking';
-import Maintainance from './project/Pages/maintainance';
+
 import Crew from './project/Pages/crew';
 
 
@@ -24,7 +24,7 @@ export default function App() {
 
           <Route path="customers" element={<Customers />} />
           <Route path="bookings" element={<Bookings />} />
-          <Route path="maintainance" element={<Maintainance />} />
+
           <Route path="crew" element={<Crew />} />
         </Route>
 

@@ -10,6 +10,7 @@ export default function DataProvider({ children }) {
     const [customer, setcustomer] = useState([]);
     const [booking, setbooking] = useState([]);
     const [loading, setloading] = useState(true);
+    const [searchQuery, setSearchQuery] = useState("");
 
 
     useEffect(() => {
@@ -39,7 +40,7 @@ export default function DataProvider({ children }) {
                     console.error("Crew fetch error:", err);
                     return [];
                 }),
-            fetch("http://localhost/flight_management_system/Customer/customersget.php")
+            fetch("http://localhost/flight_management_system/Customers/customersget.php")
                 .then(res => res.json())
                 .catch(err => {
                     console.error("Customer fetch error:", err);
@@ -82,7 +83,8 @@ export default function DataProvider({ children }) {
             booking,
             setbooking,
             loading,
-
+            searchQuery,
+            setSearchQuery,
         }}>
             {children}
         </AppData.Provider>

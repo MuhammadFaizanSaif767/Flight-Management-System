@@ -1,5 +1,8 @@
 import { Search, CalendarDays, BellRing, Sun } from 'lucide-react';
+import { useAppData } from '../../Context/Create_Context/flightcontext';
+
 export default function Topbar() {
+    const { searchQuery, setSearchQuery } = useAppData();
     const currentDate = new Date();
     const formattedDate = currentDate.toLocaleDateString('en-GB', {
 
@@ -18,6 +21,8 @@ export default function Topbar() {
 
                 <input
                     type="text"
+                    value={searchQuery}
+                    onChange={(e) => setSearchQuery(e.target.value)}
                     placeholder="Search flights,Routes,Crew,Gates..."
                     className="w-full  border border-slate-800 rounded-xl bg-[#0f162a] py-2 pl-10 pr-4 text-white outline-none placeholder:text-shadow-zinc-800 placeholder:font-inter placeholder:text-sm focus:ring-1 focus:ring-[#38BDF8] transition duration-300 mr-4"
                 />

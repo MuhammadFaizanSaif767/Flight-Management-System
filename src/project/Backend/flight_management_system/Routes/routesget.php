@@ -1,0 +1,22 @@
+<?php
+header("Access-Control-Allow-Origin: http://localhost:5050");
+
+$connect = mysqli_connect("localhost", "root", "Pakistan@123", "flight_management_system", 3307);
+if (!$connect) {
+    die(mysqli_connect_error());
+}
+
+$sql = "select * from routes";
+$result = mysqli_query($connect, $sql);
+if (!$result) {
+    die(mysqli_error($connect));
+}
+$data = [];
+while ($row = mysqli_fetch_assoc($result)) {
+    $data[] = $row;
+}
+
+echo json_encode($data);
+mysqli_close($connect);
+
+?>
