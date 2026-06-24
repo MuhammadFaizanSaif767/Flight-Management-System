@@ -1,10 +1,11 @@
 CREATE TABLE `customers` (
    `c_id` int NOT NULL AUTO_INCREMENT,
    `c_status` varchar(20) NOT NULL,
-   `c_pef_payment` varchar(20) DEFAULT NULL,
-   `c_name` varchar(20) DEFAULT NULL,
+   `c_pef_payment` varchar(20) NOT NULL,
+   `c_name` varchar(20) NOT NULL,
+   `ph` int DEFAULT NULL,
    PRIMARY KEY (`c_id`)
- )
+ ) 
  CREATE TABLE `crew` (
    `crew_id` int NOT NULL AUTO_INCREMENT,
    `crew_name` varchar(20) NOT NULL,
